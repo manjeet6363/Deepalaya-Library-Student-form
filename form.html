@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+        
+      }
+
+      .form {
+        max-width: 1000px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .heading {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .heading h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .top {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .details,
+      .date,
+      .additionalDetails,
+      .information2,
+      .information3 {
+        margin-top: 20px;
+      }
+
+      .details p,
+      .date p,
+      .additionalDetails p,
+      .information2,
+      .information3 {
+        display: flex;
+        align-items: center;
+        margin: 5px 0;
+      }
+      .information2,
+      .information3 {
+        margin-top: 30px;
+      }
+      .information3 {
+        justify-content: space-around;
+      }
+      #imageBox {
+        padding-left: 5%;
+        position: relative;
+        left: 150px;
+      }
+
+      .details input,
+      .date input,
+      .additionalDetails input {
+        flex: 1;
+        padding: 5px;
+        margin-left: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+      .details {
+        display: flex;
+        margin-right: 50px;
+      }
+
+      .print {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: #0073e6;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+
+      .print:hover {
+        background-color: #005bac;
+      }
+    </style>
+    <title>Deepalaya Community Library Form</title>
+  </head>
+  <body>
+    <div class="form">
+      <div class="heading">
+        <h2>
+          दीपालय कम्युनिटी लाइबब्रेेरी प्रोजेक्ट  <br />
+          बच्चों के लिए सदता फॉर्म 
+        </h2>
+        <h3></h3>
+      </div>
+      <div class="top">
+        <div class="details">
+          <div>
+            <p>पूरा नाम Full Name: <input type="text" id="name" /></p>
+            <p>कक्षा Class: <input type="text" name="" id="class" /></p>
+            <p>
+              विद्यालय School:
+              <input type="text" name="" id="school" />
+            </p>
+            <p>
+              माता/पिता का फ़ोन Parent’s Phone:
+              <input type="number" name="" id="phone" />
+            </p>
+            <p>
+              घर का पता Home Address: <input type="text" name="" id="" />
+            </p>
+          </div>
+          <div id="imageBox">
+            <input
+              id="photo"
+              type="file"
+              name="picture"
+              accept="image/*"
+              capture="environment"
+            />
+            <img alt="image" id="capturedImage" style="width: 150px" />
+          </div>
+        </div>
+        <div class="date" id="date">
+          <p>आज की तिथि Today’s Date: <input type="date" name="" id="" /></p>
+          <p>जन्मतिथि/आयु Age: <input type="date" name="" id="" /></p>
+        </div>
+      </div>
+      <div class="information">
+        <p>
+          आपके परिवार में और कोण दाखिला ले रहे है ? ( यदि आवशयकता हो, परिवार के और सदस्यों के विवरण के लिए अतिरिक्त कागज का उपयोग करे - गैर - परिवार के सदस्यो के नाम कृपया नहीं जोड़े ) Who else is enrolling in your
+          family? (If required, please use extra paper to add more family
+          members — please do not add names of non-family members)
+        </p>
+        <div class="additionalDetails">
+          <p>पूरा नाम Full Name: <input type="text" name="" id="" /></p>
+          <p>सम्बन्ध Relation: <input type="text" name="" id="" /></p>
+          <p>जन्मतिथि/आयु DoB/Age: <input type="text" name="" id="" /></p>
+          <p>कक्षा Class <input type="text" name="" id="" /></p>
+          <p>विद्यालय School: <input type="text" name="" id="" /></p>
+        </div>
+      </div>
+      <div class="information2">
+        मैं समझता/समझती हूँ की पुस्तके सभी के लिए है।  हमे पुस्तकों का ध्यान रखना है और उन्हें समय से लौटना है।  अगर मैं पुस्तक खोता/खोती हूँ या पुस्तक को हानि पहुँचता/पहुँचाती हूँ, तो अपनी सदस्यता बनाये रखने के लिए मैं लाइब्रेरी में कुछ देर काम करने को तैयार हूँ। I UNDERSTAND THAT THE
+        LIBRARY’S BOOKS BELONG TO EVERYONE. BOOKS MUST BE CARED FOR AND RETURNED
+        BY THE DUE DATE. IF I LOSE OR DAMAGE A BOOK, I AM WILLING TO WORK IN THE
+        LIBRARY SO THAT I CAN RETAIN MY LIBRARY PRIVILEGES.
+      </div>
+      <div class="information3">
+        <p>माता - पिता के हस्ताक्षर  Parent’s Signature</p>
+        <p>छात्र के हसयत्यताकर Student’s Signature</p>
+      </div>
+      <button id="print" class="print">Print Form</button>
+      <br>
+      <h2 class="heading">यहाँ सभी का स्वागत है <br> All are Welcome Here</h2>
+    </div>
+  </body>
+
+  <!-- <script src="index.js"></script> -->
+  <script>
+    let printForm = document.getElementById("print");
+    let photo = document.getElementById("photo");
+
+    // JavaScript code to capture and display the image
+    const photoInput = document.getElementById("photo");
+    const capturedImage = document.getElementById("capturedImage");
+
+    photoInput.addEventListener("change", function (e) {
+      const file = e.target.files[0];
+      const reader = new FileReader();
+
+      reader.onload = function (event) {
+        capturedImage.src = event.target.result;
+      };
+
+      if (file) {
+        reader.readAsDataURL(file);
+      } else {
+        capturedImage.src = "";
+      }
+    });
+
+    printForm.addEventListener("click", () => {
+      printForm.style.display = 'none';
+      document.getElementById("photo").style.display = "none";
+      document.getElementById("date").style.display = "flex";
+      const inputTags = document.querySelectorAll("input");
+      inputTags.forEach((input) => {
+        input.style.border = "none";
+      });
+      window.print();
+    });
+  </script>
+</html>
